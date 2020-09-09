@@ -1,0 +1,22 @@
+{
+  "name": "landing-page-evento",
+  "version": "1.0.0",
+  "description": "Backend para landing page de un evento.",
+  "main": "myApp.js",
+  "scripts": {
+    "start": "nodemon myApp.js"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "backend"
+  ],
+  "author": "Equipo Michis",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
