@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script type="module" src="./scripts/index.js" defer></script>
     <title>Evento de tecnología</title>
 </head>
 <body>
@@ -36,25 +37,25 @@
                         </h4>
                         <form>
                             <div class="form-input">
-                                <input type="text" name="name" placeholder="Nombre" required>
+                                <input type="text" name="name" id="name" placeholder="Nombre" required>
                             </div>
                             <div class="form-input">
-                                <input type="text" name="last name" placeholder="Apellido" required>
+                                <input type="text" name="last name" id="last_name" placeholder="Apellido" required>
                             </div>
                             <div class="form-input">
-                                <input type="number" name="age" placeholder="Edad" required>
+                                <input type="number" name="age" id="age" placeholder="Edad" required>
                             </div>
                             <div class="form-input">
-                                <input type="tel" name="telephone" placeholder="Teléfono" required>
+                                <input type="tel" name="telephone" id="telephone" placeholder="Teléfono" required>
                             </div>
                             <div class="form-input">
-                                <input type="email" name="email" placeholder="Email" tabindex="10" required>
+                                <input type="email" name="email" id="email" placeholder="Email" tabindex="10" required>
                             </div>
                             <div class="form-input">
-                                <input type="text" name="address" placeholder="Dirección" required>
+                                <input type="text" name="address" id="address" placeholder="Dirección" required>
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-block" type="submit">Registrarte</button>
+                                <button class="btn btn-block" id="submit_btn" type="submit" onclick="registro()">Registrarte</button>
                             </div>
                         </form>
                     </div>
