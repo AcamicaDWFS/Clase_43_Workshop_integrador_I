@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script type="module" src="./scripts/index.js" defer></script>
+    <title>Evento de tecnología</title>
+</head>
+<body>
+    <header>
+        <img id="logotech" src="assets/techlogo.png" alt="logo">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="btn btn-outline-warning" href="#">Información del evento</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-warning" href="#">Ayuda</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-danger" href="#">Administración</a>
+            </li>
+          </ul>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 form-block px-4">
+                    <div class="col-lg-8 col-md-6 col-sm-8 col-xs-12 form-box">
+                        <div class="text-center mb-3 mt-5">
+                            <img src="assets/logo.png" alt="logo">
+                        </div>
+                        <h4 class="text-center mb-4">
+                            ¡Registrate para el evento más grande de tecnología!
+                        </h4>
+                        <form>
+                            <div class="form-input">
+                                <input type="text" name="name" id="name" placeholder="Nombre" required>
+                            </div>
+                            <div class="form-input">
+                                <input type="text" name="last name" id="last_name" placeholder="Apellido" required>
+                            </div>
+                            <div class="form-input">
+                                <input type="number" name="age" id="age" placeholder="Edad" required>
+                            </div>
+                            <div class="form-input">
+                                <input type="tel" name="telephone" id="telephone" placeholder="Teléfono" required>
+                            </div>
+                            <div class="form-input">
+                                <input type="email" name="email" id="email" placeholder="Email" tabindex="10" required>
+                            </div>
+                            <div class="form-input">
+                                <input type="text" name="address" id="address" placeholder="Dirección" required>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-block" id="submit_btn" type="submit" onclick="registro()">Registrarte</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 d-none d-lg-block image-container">
+                        
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
