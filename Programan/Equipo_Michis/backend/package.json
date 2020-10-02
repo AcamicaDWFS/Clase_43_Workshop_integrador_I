@@ -4,7 +4,8 @@
   "description": "Backend para landing page de un evento.",
   "main": "myApp.js",
   "scripts": {
-    "start": "nodemon registro_usuarios.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [
     "rest",
@@ -19,7 +20,9 @@
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
     "mariadb": "^2.4.2",
-    "nodemon": "^2.0.4",
     "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
