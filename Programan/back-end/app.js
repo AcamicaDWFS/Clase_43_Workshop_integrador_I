@@ -2,6 +2,7 @@ const express = require( 'express' );
 const bodyParser = require( 'body-parser' );
 const userRoutes = require( './routes/user_routes.js' );
 const productRoutes = require( './routes/product_route.js' );
+const middlewares = require("./middlewares");
 
 const app = express();
 
@@ -20,7 +21,7 @@ app.use(bodyParser.json());
 app.get( '/', ( req, res ) => {
     res.send( 'Hello World!' );
 });
-app.use( '/users/', userRoutes );
-app.use( '/products/', productRoutes );
+app.use( '/users/', middlewares.checkToken, userRoutes );
+app.use( '/products/', middlewares.checkToken, productRoutes );
 
 app.listen( 3000, () => console.log('SERVER ONLINE') );

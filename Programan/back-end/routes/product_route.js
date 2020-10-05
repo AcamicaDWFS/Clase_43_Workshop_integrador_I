@@ -1,4 +1,33 @@
-const express = require( 'express' );
+const router = require("express").Router();
+const { Product } = require("../conexion");
+
+router.get("/", async (request, response) => {
+    const products = await Product.findAll();
+    response.send(products);
+});
+
+router.post("/new", async (request, response) => {
+    const product = await Movie.create(request.body);
+    response.json(product);
+});
+
+router.put("/buy/:id", async (request, response) => {
+    await Product.update(request.body, {
+        where: { id: request.params.id }
+    });
+    response.json({ success: "Producto actualizada" });
+});
+
+router.delete("/remove/:id", async (request, response) => {
+    await Movie.destroy({
+        where: { id: request.params.id }
+    });
+    response.json({ success: "Producto borrado" });
+});
+
+module.exports = router;
+
+/* const express = require( 'express' );
 const products = require( '../models/product.js' );
 const users = require ( '../models/user.js' );
 
@@ -43,4 +72,4 @@ router.put( '/buy/:name', ( req, res ) => {
     }
 } );
 
-module.exports = router;
+module.exports = router; */

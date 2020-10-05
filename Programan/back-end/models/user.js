@@ -1,4 +1,19 @@
-let userList = [];
+module.exports = ( sequelize, type ) => {
+    return sequelize.define("user", {
+        id: {
+            type: type.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        username: type.STRING,
+        fullname: type.STRING,
+        email: type.STRING,
+        password: type.STRING,
+    });
+};
+
+
+/* let userList = [];
 
 class User {
     constructor( fullname, username, email, password ) {
@@ -50,4 +65,4 @@ module.exports = {
     newUser,
     login,
     exist
-};
+}; */

@@ -1,4 +1,30 @@
-class Product {
+const user = require("./user");
+
+module.exports = (sequelize, type) => {
+    return sequelize.define("product", {
+        id: {
+            type: type.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        user_id: {
+            type: type.INTEGER,
+            // references: {
+            //     model: user,
+            //     key: 'id'
+            // }
+        },
+        name: type.STRING,
+        description: type.STRING,
+        stock: type.INTEGER,
+        price: type.INTEGER,
+        status: { type: type.ENUM,
+                    values: [ 'disponible', 'vendido', 'enviado', 'entregado' ]
+                }
+    });
+};
+
+/* class Product {
     constructor( username, name, price, stock, description ) {
         this.username = username;
         this.name = name;
@@ -63,4 +89,4 @@ module.exports = {
     myProducts,
     update,
     getAll
-};
+}; */
